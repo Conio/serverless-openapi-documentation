@@ -1,7 +1,7 @@
 {
   "name": "@conio/serverless-openapi-documentation",
   "version": "1.0.0",
-  "description": "Serverless 1.0 plugin to generate OpenAPI V3 documentation from serverless configuration",
+  "description": "Serverless 1.0 plugin to generate OpenAPI V3 documentation from serverless configuration (*)",
   "main": "index.js",
   "engines": {
     "node": ">=6.0.0",
