@@ -149,6 +149,10 @@ export class DefinitionGenerator {
       operationObj.deprecated = true;
     }
 
+    if (documentationConfig.securitySchemes) {
+      operationObj.security = documentationConfig.securitySchemes
+    }
+
     if (documentationConfig.requestBody) {
       operationObj.requestBody = this.getRequestBodiesFromConfig(
         documentationConfig
@@ -271,9 +275,8 @@ export class DefinitionGenerator {
         if (requestModel) {
           const reqModelConfig = {
             schema: {
-              $ref: `#/components/schemas/${
-                documentationConfig.requestModels[requestModelType]
-              }`
+              $ref: `#/components/schemas/${documentationConfig.requestModels[requestModelType]
+                }`
             }
           };
 
